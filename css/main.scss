@@ -189,4 +189,30 @@ body {
             }
         }
     }
+    //MAIN
+    .main-content {
+        margin: 30px 40px;
+        h2 {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .gallery {
+            .row {
+                margin: 0 auto;
+                .subcategory-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 23%;
+                    height: 200px;
+                    margin: 10px 10px;
+                    background-color: rgba($primary-color, 0.5);
+                    h3 {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -261,4 +261,38 @@ body .first-cta-header .header-main-content .bottom-links a:nth-child(3), body .
 body .first-cta-header .header-main-content .bottom-links a:hover {
   color: #327ab8;
 }
+
+body .main-content {
+  margin: 30px 40px;
+}
+
+body .main-content h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+body .main-content .gallery .row {
+  margin: 0 auto;
+}
+
+body .main-content .gallery .row .subcategory-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 23%;
+  height: 200px;
+  margin: 10px 10px;
+  background-color: rgba(50, 122, 184, 0.5);
+}
+
+body .main-content .gallery .row .subcategory-card h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */
