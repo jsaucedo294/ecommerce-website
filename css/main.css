@@ -1,1 +1,264 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .top-menu {
+  background-color: #327ab8;
+  width: 100%;
+  padding: 0 40px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .top-menu .top-menu-links a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+body .top-menu .top-menu-contact a {
+  color: #fff;
+}
+
+body .main-menu {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+}
+
+body .main-menu .logo-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .main-menu .logo-search .menu-toggle {
+  margin: 20px;
+}
+
+body .main-menu .logo-search .menu-toggle .menu-line {
+  background-color: #000;
+  width: 30px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+body .main-menu .logo-search .menu-toggle .menu-line:nth-child(2) {
+  margin: 5px 0;
+}
+
+body .main-menu .logo-search .search {
+  margin: 0 60px;
+  position: relative;
+}
+
+body .main-menu .logo-search .search input {
+  width: 300px;
+  height: 30px;
+}
+
+body .main-menu .logo-search .search input::-webkit-input-placeholder {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+body .main-menu .logo-search .search input:-ms-input-placeholder {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+body .main-menu .logo-search .search input::-ms-input-placeholder {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+body .main-menu .logo-search .search input::placeholder {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+body .main-menu .logo-search .search i {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body .main-menu nav {
+  margin: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-menu nav .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .main-menu nav .main-nav li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+body .main-menu nav .main-nav li a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .main-menu nav .main-nav li a:hover {
+  color: #327ab8;
+}
+
+body .first-cta-header {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/bg-electronics.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body .first-cta-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+body .first-cta-header .header-links {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 1;
+}
+
+body .first-cta-header .header-links a {
+  margin: 0 10px;
+  color: #fff;
+}
+
+body .first-cta-header .header-main-content {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+body .first-cta-header .header-main-content h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+body .first-cta-header .header-main-content p {
+  font-size: 35px;
+  margin: 0 0 30px;
+}
+
+body .first-cta-header .header-main-content a.btn-cta {
+  margin: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+  border: solid 4px #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .first-cta-header .header-main-content a.btn-cta:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+body .first-cta-header .header-main-content .bottom-links {
+  margin-top: 40px;
+}
+
+body .first-cta-header .header-main-content .bottom-links span {
+  font-size: 20px;
+}
+
+body .first-cta-header .header-main-content .bottom-links a {
+  font-size: 20px;
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: underline;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .first-cta-header .header-main-content .bottom-links a:nth-child(3), body .first-cta-header .header-main-content .bottom-links a:nth-child(4) {
+  border-left: solid 2px #fff;
+  padding-left: 30px;
+}
+
+body .first-cta-header .header-main-content .bottom-links a:hover {
+  color: #327ab8;
+}
+/*# sourceMappingURL=main.css.map */
