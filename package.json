@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "This is a simple ecommerce page",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsaucedo294/ecommerce-website.git"
+  },
+  "author": "Jorge Saucedo",
+  "license": "ISC",
+  "homepage": "https://jsaucedo294.github.io/ecommerce-page",
+  "bugs": {
+    "url": "https://github.com/jsaucedo294/ecommerce-website/issues"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
