@@ -4,6 +4,9 @@ $primary-color: #327ab8;
 @mixin easeOut {
     transition: all .5s ease-in-out;
 }
+@mixin easeOutSlow {
+    transition: all 1s ease-in-out;
+}
 
 html, body {
     margin: 0;
@@ -208,13 +211,76 @@ body {
                     height: 200px;
                     margin: 10px 10px;
                     background-color: rgba(#000, 0.5);
+                    background-position: center;
+                    overflow: hidden;
+                    @include easeOutSlow;
+                    @for $i from 1 through 8 {
+                        &:nth-child(#{$i}) {
+                            @if $i % 2 == 0 {
+                                background-image: url(../img/car.jpg);
+                                background-size: cover;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: rgba(#fff, 0.5);
+                                    
+                                    
+                                }
+                                &:hover {
+                                    background-size: 120% 120%;
+                        
+                                    &:after {
+                                        background-color: transparent;
+                                    }
+                                    h3 {
+                                        color: #fff;
+                                    }
+                                }
+                                h3 {
+                                    color: #000;
+                                    z-index: 1;
+                                }
+                            } @else {
+                                background-image: url(../img/headphones.jpg);
+                                background-size: cover;
+                                @include easeOutSlow;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: rgba(#000, 0.5);
+                                    @include easeOut;
+                                }
+                                &:hover {
+                                    background-size: 120% 120%;
+                                    &:after {
+                                        background-color: transparent;
+                                    }
+                                    h3 {
+                                        color: #fff;
+                                    }
+                                }
+                                h3 {
+                                    color: #fff;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
                     }
                     h3 {
                         text-transform: uppercase;
                         font-weight: 600;
+                        color: #fff;
                     }
                 }
             }
         }
-    }
 }
