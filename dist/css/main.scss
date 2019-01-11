@@ -17,26 +17,30 @@ body {
     font-family: 'Montserrat', sans-serif;
     //HEADER
         //Top Menu
-    .top-menu{
+    .top-menu {
         background-color: $primary-color;
         width: 100%;
         padding: 0 40px;
-        height: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        .top-menu-links {
-            a {
-                color: #fff;
-                margin: 0 10px;
+        height: 25px;
+        .top-menu-content {
+            display: flex; 
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .top-menu-links {
+                a {
+                    color: #fff;
+                    margin: 0 10px;
+                    font-size: 15px;
+                }
             }
+            .top-menu-contact {
+                a {
+                    color: #fff;
+                    font-size: 15px;
+                }
+            } 
         }
-        .top-menu-contact {
-            a {
-                color: #fff;
-            }
-        } 
     }
         //Main Menu
     .main-menu {
@@ -116,6 +120,7 @@ body {
         background-size: cover;
         background-attachment: fixed;
         position: relative;
+        overflow: hidden;
         &::after{
             content: "";
             position: absolute;
@@ -199,27 +204,15 @@ body {
             text-transform: uppercase;
             font-weight: 600;
         }
-        .gallery {
+        .product-gallery {
             .row {
-                margin: 10px; 
-
                 .subcategory-card {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 23%;
-                    height: 200px;
-                    margin: 10px 10px;
-                    background-color: rgba(#000, 0.5);
-                    background-position: center;
-                    overflow: hidden;
-                    @include easeOutSlow;
+                    margin: 10px 0;
                     @for $i from 1 through 8 {
-                        &:nth-child(#{$i}) {
+                        &:nth-child(#{$i}) > .card-content {
                             @if $i % 2 == 0 {
                                 background-image: url(../img/car.jpg);
                                 background-size: cover;
-                                @include easeOutSlow;
                                 &:after {
                                     content: "";
                                     position: absolute;
@@ -228,6 +221,7 @@ body {
                                     right: 0;
                                     bottom: 0;
                                     background-color: rgba(#fff, 0.5);
+                                    @include easeOutSlow;
                                 }
                                 &:hover {
                                     &:after {
@@ -241,13 +235,11 @@ body {
                                 }
                                 h3 {
                                     color: #000;
-                                    z-index: 1;
-                                    @include easeOut;
                                 }
                             } @else {
                                 background-image: url(../img/headphones.jpg);
                                 background-size: cover;
-                                
+            
                                 &:after {
                                     content: "";
                                     position: absolute;
@@ -268,21 +260,30 @@ body {
                                         padding: 10px;
                                     }
                                 }
-                                h3 {
-                                    color: #fff;
-                                    z-index: 1;
-                                    @include easeOut;
-                                }
                             }
                         }
                     }
-                    }
-                    h3 {
-                        text-transform: uppercase;
-                        font-weight: 600;
-                        color: #fff;
+                    .card-content {
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        justify-content: center;
+                        height: 200px;
+                        background-color: rgba(#000, 0.5);
+                        background-position: center;
+                        overflow: hidden;
+                        @include easeOutSlow;
+                        
+                        .card-title {
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            color: #fff;
+                            z-index: 1;
+                            @include easeOut;
+                        }
                     }
                 }
             }
         }
+    }
 }
