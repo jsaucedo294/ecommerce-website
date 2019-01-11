@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'config';
+@import 'media';
+@import 'menu';
 
-$primary-color: #327ab8;
-@mixin easeOut {
-    transition: all .5s ease-in-out;
-}
-@mixin easeOutSlow {
-    transition: all 1s ease-in-out;
-}
 
 html, body {
     margin: 0;
@@ -47,23 +42,12 @@ body {
         width: 100%;
         height: 50px;
         margin: 10px 0;
+        position: relative;
         .logo-search{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            .menu-toggle {
-                margin: 20px;
-                .menu-line {
-                    background-color: #000;
-                    width: 30px;
-                    height: 4px;
-                    border-radius: 4px;
-                    &:nth-child(2){
-                        margin: 5px 0;
-                    }
-                }
-            }
             //search bar
             .search {
                 margin: 0 60px;

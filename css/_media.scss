@@ -1,0 +1,104 @@
+@mixin phone {
+    @media screen and (max-width: 415px){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 416px) and (max-width: 750px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: 751px) and (max-width: 1200px){
+        @content;
+    }
+}
+
+@include phone {
+    .menu-nav {
+        width: 100% !important;
+    }
+    .main-menu >.logo-search > .menu-toggle {
+        position: absolute;
+        top: -5px;
+        left: -10px;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .first-cta-header {
+        height: 300px !important;
+        .header-main-content {
+            width: 100%;
+            padding: 0 auto;
+            h1 {
+                font-size: 35px !important;
+            }
+            p {
+                font-size: 15px !important;
+            }
+            a.btn-cta {
+                font-size: 15px !important;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .menu-nav {
+        width: 75% !important;
+    }
+    .main-menu >.logo-search > .menu-toggle {
+        position: absolute;
+        top: -5px;
+        left: -10px;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .first-cta-header {
+        height: 300px !important;
+        .header-main-content {
+            width: 100%;
+            padding: 0 auto;
+            h1 {
+                font-size: 35px !important;
+            }
+            p {
+                font-size: 15px !important;
+            }
+            a.btn-cta {
+                font-size: 15px !important;
+            }
+        }
+    }
+}
+
+@include laptop {
+    .first-cta-header {
+        height: 300px !important;
+        .header-main-content {
+            width: 100%;
+            padding: 0 auto;
+            h1 {
+                font-size: 50px !important;
+            }
+            p {
+                font-size: 25px !important;
+            }
+            a.btn-cta {
+                font-size: 20px !important;
+            }
+            .bottom-links {
+                font-size: 10px !important;
+                margin: 20px 0 !important;
+            }
+        }
+    }
+}
+
+

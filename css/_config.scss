@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$primary-color: #327ab8;
+$secondary-color: #333;
+@mixin easeOut {
+    transition: all .5s ease-in-out;
+}
+@mixin easeOutSlow {
+    transition: all 1s ease-in-out;
+}
