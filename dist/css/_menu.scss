@@ -1,0 +1,82 @@
+@import 'config';
+
+.menu-toggle {
+    @include easeOut;
+    z-index: 5;
+    margin: 20px;
+    &.close {
+        transform: rotate(180deg);
+        .menu-line {
+            &:nth-child(1) {
+                @include easeOut;
+                transform: rotate(45deg) translate(5px, 5px);
+                background-color: #fff;
+            }
+            &:nth-child(2) {
+                @include easeOut;
+                opacity: 0
+            }
+            &:nth-child(3) {
+                @include easeOut;
+                transform: rotate(-45deg) translate(7px, -8px);
+                background-color: #fff;
+            }
+        }
+    }
+    .menu-line {
+        @include easeOut;
+        background-color: #000;
+        width: 30px;
+        height: 4px;
+        border-radius: 4px;
+        &:nth-child(2){
+            margin: 5px 0;
+        }
+    }
+}
+.menu-nav {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 50%;
+    background-color: rgba(darken($primary-color, 12), 0.9);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 2;
+    transform: translate3d(-1000px, 0, 0);
+    @include easeOut;
+    &.show {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    .nav-item {
+        margin-bottom: 20px;
+        padding: 5px 20px;
+        @include easeOut;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 40px;
+        text-decoration: none;
+        transform: translate3d(-1000px, 0, 0);
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+        &:hover {
+            color: $secondary-color;
+            background-color: #fff;
+        }
+    }
+    @for $x from 1 through 4 {
+       .nav-item:nth-child(#{$x}){
+            transition-delay: .1s * $x;
+       }     
+    }
+}
