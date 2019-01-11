@@ -1,6 +1,11 @@
+// 1. HEADER
+// 2. GALLERY
+// 3. BRANDS CAROUSEL
+
 @import 'config';
 @import 'media';
 @import 'menu';
+
 
 
 html, body {
@@ -10,7 +15,8 @@ html, body {
 body {
     background-color: #fff;
     font-family: 'Montserrat', sans-serif;
-    //HEADER
+    font-weight: 400;
+    // 1. HEADER
         //Top Menu
     .top-menu {
         background-color: $primary-color;
@@ -181,13 +187,14 @@ body {
             }
         }
     }
-    //MAIN
+    // 2. GALLERY
+    .section-title {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
     .main-content {
-        margin: 30px 40px;
-        h2 {
-            text-transform: uppercase;
-            font-weight: 600;
-        }
+        margin: 40px auto;
+        padding: 0 40px;
         .product-gallery {
             .row {
                 .subcategory-card {
@@ -267,6 +274,56 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+    // 3. BRANDS CAROUSEL
+    .brands {
+        margin: 40px 0;
+        padding: 0 40px;
+        .carousel {
+            .carousel-inner {
+                width: 90%;
+                margin: 30px auto;
+                .brand-container {
+                    display: flex;
+                    justify-content: center;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(#fff, 0.5);
+                        @include easeOut;
+                    }
+                    &:hover {
+                        &:after {
+                            background-color: transparent;
+                        }
+                    }
+                    img {
+                        height: 100%;
+                        margin: auto;
+                    }
+                }
+            }
+            .carousel-control-prev, .carousel-control-next {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                i {
+                    color: #000;
+                    font-size: 60px;
+                    font-weight: 400;
+                }
+            }
+            .carousel-control-prev {
+                justify-content: flex-start;
+            }
+            .carousel-control-next {
+                justify-content: flex-end;
             }
         }
     }

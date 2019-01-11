@@ -19,3 +19,6 @@ function toggleMenu(){
         btnToggled = false;
     }
 }
+$('.carousel').carousel({
+    interval: false
+});

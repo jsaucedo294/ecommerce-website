@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 @media screen and (max-width: 415px) {
   .menu-nav {
     width: 100% !important;
@@ -223,6 +223,7 @@ html, body {
 body {
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 body .top-menu {
@@ -470,13 +471,14 @@ body .first-cta-header .header-main-content .bottom-links a:hover {
   color: #327ab8;
 }
 
-body .main-content {
-  margin: 30px 40px;
+body .section-title {
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
-body .main-content h2 {
-  text-transform: uppercase;
-  font-weight: 600;
+body .main-content {
+  margin: 40px auto;
+  padding: 0 40px;
 }
 
 body .main-content .product-gallery .row .subcategory-card {
@@ -741,5 +743,76 @@ body .main-content .product-gallery .row .subcategory-card .card-content .card-t
   z-index: 1;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+}
+
+body .brands {
+  margin: 40px 0;
+  padding: 0 40px;
+}
+
+body .brands .carousel .carousel-inner {
+  width: 90%;
+  margin: 30px auto;
+}
+
+body .brands .carousel .carousel-inner .brand-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .brands .carousel .carousel-inner .brand-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .brands .carousel .carousel-inner .brand-container:hover:after {
+  background-color: transparent;
+}
+
+body .brands .carousel .carousel-inner .brand-container img {
+  height: 100%;
+  margin: auto;
+}
+
+body .brands .carousel .carousel-control-prev, body .brands .carousel .carousel-control-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .brands .carousel .carousel-control-prev i, body .brands .carousel .carousel-control-next i {
+  color: #000;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+body .brands .carousel .carousel-control-prev {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .brands .carousel .carousel-control-next {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=main.css.map */
