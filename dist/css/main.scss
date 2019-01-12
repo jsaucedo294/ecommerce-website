@@ -1,6 +1,7 @@
 // 1. HEADER
 // 2. GALLERY
 // 3. BRANDS, PRODUCT & VIDEO CAROUSEL
+// 6. CATEGORIES LIST
 
 
 @import 'config';
@@ -331,11 +332,34 @@ body {
                     }
                 }
             }
+            // VIDEO CAROUSEL
+            .video-container {
+                position: relative;
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                    color: #fff;
+                    font-size: 90px;
+                    @include easeOut;
+                }
+                iframe {
+                    width: 100% !important;
+                }
+                &:hover {
+                    i {
+                        transform: translate3d(0,1000px,0);
+                    }
+                }
+            }
         }
         .carousel-control-prev, .carousel-control-next {
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: 30px;
             i {
                 color: #000;
                 font-size: 60px;
@@ -352,5 +376,42 @@ body {
 
     }
     
-
+    // 6. CATEGORIES LIST
+    .list-container {
+        .row .list {
+            max-width: 250px;
+            margin: 20px auto;
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+            }
+            ul {
+                li {
+                    list-style: none;
+                    a {
+                      margin-left: -15px; 
+                    }
+                }
+            }
+        }
+    }
+    .guides {
+        margin: 40px 0;
+        .guide-container {
+            padding: 0 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            img {
+                width: 100%;
+            }
+            a {
+                font-size: 20px;
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+    }
 }
