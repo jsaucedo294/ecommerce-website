@@ -46,6 +46,13 @@
   .list-container .row .list ul {
     margin-left: -90px;
   }
+  .footer-container .social-media .social .icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .footer-container .social-media .social .icon i {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 416px) and (max-width: 750px) {
@@ -108,6 +115,13 @@
   .first-cta-header .header-main-content .bottom-links {
     font-size: 10px !important;
     margin: 20px 0 !important;
+  }
+  .footer-container .social-media .social .icon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .footer-container .social-media .social .icon i {
+    font-size: 30px;
   }
 }
 
@@ -942,5 +956,120 @@ body .guides .guide-container a {
   font-size: 20px;
   font-weight: 600;
   color: #327ab8;
+}
+
+body .guides .guide-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .guides-link {
+  text-decoration: none;
+  color: #333;
+  border: solid 3px #333;
+  font-size: 20px;
+  padding: 10px 20px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .guides-link i {
+  margin-left: 10px;
+}
+
+body .guides-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+body .google-ad-container {
+  width: 100%;
+  height: 200px;
+  background-color: #dad8d8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .google-ad-container h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+body .footer-container .social-media, body .footer-container .sticker-container {
+  border: solid 3px #333;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .footer-container .social-media h3, body .footer-container .sticker-container h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+body .footer-container .social-media i, body .footer-container .sticker-container i {
+  font-size: 50px;
+}
+
+body .footer-container .social-media .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+body .footer-container .social-media .social .icon {
+  width: 80px;
+  height: 80px;
+  border: solid 3px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+body .footer-container .social-media .social .icon i {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+body .footer-container .sticker-container i {
+  margin: 10px;
+  font-size: 70px;
 }
 /*# sourceMappingURL=main.css.map */

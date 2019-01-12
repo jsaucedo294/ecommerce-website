@@ -2,6 +2,9 @@
 // 2. GALLERY
 // 3. BRANDS, PRODUCT & VIDEO CAROUSEL
 // 6. CATEGORIES LIST
+// 7. GUIDES GALLERY
+// 8. GOOGLE AD
+// 9. FOOTER
 
 
 @import 'config';
@@ -396,6 +399,7 @@ body {
             }
         }
     }
+    // 7. GUIDES GALLERY
     .guides {
         margin: 40px 0;
         .guide-container {
@@ -411,6 +415,87 @@ body {
                 font-size: 20px;
                 font-weight: 600;
                 color: $primary-color;
+            }
+        }
+        .guide-link-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            align-items: center;
+            
+        }
+    }
+    .guides-link {
+        text-decoration: none;
+        color: $secondary-color;
+        border: solid 3px $secondary-color;
+        font-size: 20px;
+        padding: 10px 20px;
+        @include easeOut;
+        i {
+            margin-left: 10px;
+        }
+        &:hover {
+            background-color: $secondary-color;
+            color: #fff;
+        }
+    }
+    // 8. GOOGLE AD
+    .google-ad-container {
+        width: 100%;
+        height: 200px;
+        background-color: #dad8d8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            color: $secondary-color;
+        }
+    }
+    // 9. FOOTER
+    .footer-container {
+        .social-media, .sticker-container {
+            border: solid 3px $secondary-color;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                font-size: 40px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-align: center;
+            }
+            i {
+                font-size: 50px;
+            }
+        }
+        .social-media {
+            .social {
+                display: flex;
+                margin-top: 10px;
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                    border: solid 3px $secondary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 10px;
+                    i {
+                        padding: 10px;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+        .sticker-container {
+            i {
+                margin: 10px;
+                font-size: 70px;
             }
         }
     }

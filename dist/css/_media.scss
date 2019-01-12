@@ -60,6 +60,17 @@
             }
         }
     }
+    .footer-container {
+        .social-media {
+            .social .icon {
+                width: 50px !important;
+                height: 50px !important;
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -120,6 +131,17 @@
             .bottom-links {
                 font-size: 10px !important;
                 margin: 20px 0 !important;
+            }
+        }
+    }
+    .footer-container {
+        .social-media {
+            .social .icon {
+                width: 70px !important;
+                height: 70px !important;
+                i {
+                    font-size: 30px;
+                }
             }
         }
     }
