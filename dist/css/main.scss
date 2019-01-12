@@ -1,6 +1,7 @@
 // 1. HEADER
 // 2. GALLERY
-// 3. BRANDS CAROUSEL
+// 3. BRANDS, PRODUCT & VIDEO CAROUSEL
+
 
 @import 'config';
 @import 'media';
@@ -11,6 +12,18 @@
 html, body {
     margin: 0;
     padding: 0;
+    section {
+        margin-bottom: 40px;
+        .section-title {
+            text-transform: uppercase;
+            font-weight: 800;
+            & +p {
+                margin-top: -7px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
 }
 body {
     background-color: #fff;
@@ -188,13 +201,8 @@ body {
         }
     }
     // 2. GALLERY
-    .section-title {
-        text-transform: uppercase;
-        font-weight: 800;
-    }
+    
     .main-content {
-        margin: 40px auto;
-        padding: 0 40px;
         .product-gallery {
             .row {
                 .subcategory-card {
@@ -277,54 +285,72 @@ body {
             }
         }
     }
-    // 3. BRANDS CAROUSEL
-    .brands {
-        margin: 40px 0;
-        padding: 0 40px;
-        .carousel {
-            .carousel-inner {
-                width: 90%;
-                margin: 30px auto;
-                .brand-container {
-                    display: flex;
-                    justify-content: center;
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(#fff, 0.5);
-                        @include easeOut;
-                    }
-                    &:hover {
-                        &:after {
-                            background-color: transparent;
-                        }
-                    }
-                    img {
-                        height: 100%;
-                        margin: auto;
-                    }
-                }
-            }
-            .carousel-control-prev, .carousel-control-next {
+    // 3. BRANDS, PRODUCT & VIDEO CAROUSEL
+    .carousel {
+        .carousel-inner {
+            width: 90%;
+            margin: 30px auto;
+            .brand-container, .product-container, .video-container {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                i {
-                    color: #000;
-                    font-size: 60px;
-                    font-weight: 400;
+                img {
+                    height: 100%;
+                    margin: auto;
                 }
             }
-            .carousel-control-prev {
-                justify-content: flex-start;
+            // BRANDS CAROUSEL
+            .brand-container {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(#fff, 0.5);
+                    @include easeOut;
+                }
+                &:hover {
+                    &:after {
+                        background-color: transparent;
+                    }
+                }
             }
-            .carousel-control-next {
-                justify-content: flex-end;
+            // PRODUCTS CAROUSEL
+            .product-container {
+                img {
+                    margin-bottom: 40px;
+                }
+                p {
+                    margin: 0;
+                    &.product-title {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
+        .carousel-control-prev, .carousel-control-next {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            i {
+                color: #000;
+                font-size: 60px;
+                font-weight: 400;
+            }
+        }
+        .carousel-control-prev {
+            justify-content: flex-start;
+        }
+        .carousel-control-next {
+            justify-content: flex-end;
+        }
+        
+
     }
+    
+
 }

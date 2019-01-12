@@ -13,6 +13,11 @@
         @content;
     }
 }
+@mixin xl-laptop {
+    @media (min-width: 1201px){
+        @content;
+    }
+}
 
 @include phone {
     .menu-nav {
@@ -47,6 +52,10 @@
 }
 
 @include tablet {
+    section {
+        margin: 40px auto 60px;
+        padding: 0 40px !important;
+    }
     .menu-nav {
         width: 75% !important;
     }
@@ -79,6 +88,10 @@
 }
 
 @include laptop {
+    section {
+        margin: 40px auto 60px !important;
+        padding: 0 40px !important;
+    }
     .first-cta-header {
         height: 300px !important;
         .header-main-content {
@@ -98,6 +111,12 @@
                 margin: 20px 0 !important;
             }
         }
+    }
+}
+@include xl-laptop {
+    section {
+        margin: 40px auto 60px !important;
+        padding: 0 40px !important;
     }
 }
 
