@@ -1040,6 +1040,10 @@ body .footer-container .social-media i, body .footer-container .sticker-containe
   font-size: 50px;
 }
 
+body .footer-container .social-media {
+  margin-bottom: 20px;
+}
+
 body .footer-container .social-media .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1061,11 +1065,21 @@ body .footer-container .social-media .social .icon {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 10px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 body .footer-container .social-media .social .icon i {
   padding: 10px;
   margin: 0 5px;
+}
+
+body .footer-container .social-media .social .icon:hover {
+  background-color: #333;
+}
+
+body .footer-container .social-media .social .icon:hover i {
+  color: #fff;
 }
 
 body .footer-container .sticker-container i {

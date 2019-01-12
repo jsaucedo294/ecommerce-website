@@ -474,6 +474,7 @@ body {
             }
         }
         .social-media {
+            margin-bottom: 20px;
             .social {
                 display: flex;
                 margin-top: 10px;
@@ -485,9 +486,16 @@ body {
                     align-items: center;
                     justify-content: center;
                     margin: 0 10px;
+                    @include easeOut;
                     i {
                         padding: 10px;
                         margin: 0 5px;
+                    }
+                    &:hover {
+                        background-color: $secondary-color;
+                        i {
+                            color: #fff;
+                        }
                     }
                 }
             }
