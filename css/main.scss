@@ -1,7 +1,12 @@
 // 1. HEADER
 // 2. GALLERY
 // 3. BRANDS, PRODUCT & VIDEO CAROUSEL
+// 4. SORT TABLE
+// 5. PRODUCT GALLERY
 // 6. CATEGORIES LIST
+// 7. GUIDES GALLERY
+// 8. GOOGLE AD
+// 9. FOOTER
 
 
 @import 'config';
@@ -375,6 +380,99 @@ body {
         
 
     }
+    // 4. SORT TABLE
+    .sort-table {
+        background-color: rgba($primary-color, 0.3);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 3px $secondary-color;
+        table {
+            width: 90%;
+            margin: 20px 0;
+            tr > th {
+                font-size: 16px;
+            }
+            input[type=checkbox] + label {
+                color: $secondary-color;
+                font-size: 14px;
+                margin: 0;
+            }
+            input[type=checkbox]:checked + label {
+                font-weight: 600;
+            }
+        }
+    }
+    // 5. PRODUCT GALLERY
+    .product-card {
+        position: relative;
+        height: 420px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 20px 0 0;
+        }
+        p {
+            font-size: 15px;
+            margin: 0;
+        }
+        span {
+            font-size: 30px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+        .more-info-btn {
+            color: #fff;
+            background-color: darken($primary-color, 10);
+            padding: 5px 40px;
+            text-decoration: none;
+            margin-top: 20px;
+            transform: translate3d(0, 400px, 0);
+            @include easeOut;
+        }
+        .options-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate3d(0, 400px, 0);
+            padding: 20px 0 0;
+            @include easeOut;
+            p {
+                font-size: 12px;
+                margin-right: 15px;
+            }
+            .compare {
+                input[type=checkbox] + label {
+                    font-size: 12px;
+                }
+                input[type=checkbox]:checked + label {
+                    font-weight: 600;
+                }
+            }
+            a {
+                font-size: 12px;
+                margin-left: 15px;
+            }
+        }
+        &:hover {
+            border: solid 1px $secondary-color;
+            .more-info-btn {
+                transform: translate3d(0,0,0);
+            }
+            .options-div {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
     
     // 6. CATEGORIES LIST
     .list-container {
@@ -396,6 +494,7 @@ body {
             }
         }
     }
+    // 7. GUIDES GALLERY
     .guides {
         margin: 40px 0;
         .guide-container {
@@ -411,6 +510,95 @@ body {
                 font-size: 20px;
                 font-weight: 600;
                 color: $primary-color;
+            }
+        }
+        .guide-link-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            align-items: center;
+            
+        }
+    }
+    .guides-link {
+        text-decoration: none;
+        color: $secondary-color;
+        border: solid 3px $secondary-color;
+        font-size: 20px;
+        padding: 10px 20px;
+        @include easeOut;
+        i {
+            margin-left: 10px;
+        }
+        &:hover {
+            background-color: $secondary-color;
+            color: #fff;
+        }
+    }
+    // 8. GOOGLE AD
+    .google-ad-container {
+        width: 100%;
+        height: 200px;
+        background-color: #dad8d8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            color: $secondary-color;
+        }
+    }
+    // 9. FOOTER
+    .footer-container {
+        .social-media, .sticker-container {
+            border: solid 3px $secondary-color;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                font-size: 40px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-align: center;
+            }
+            i {
+                font-size: 50px;
+            }
+        }
+        .social-media {
+            margin-bottom: 20px;
+            .social {
+                display: flex;
+                margin-top: 10px;
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                    border: solid 3px $secondary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 10px;
+                    @include easeOut;
+                    i {
+                        padding: 10px;
+                        margin: 0 5px;
+                    }
+                    &:hover {
+                        background-color: $secondary-color;
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .sticker-container {
+            i {
+                margin: 10px;
+                font-size: 70px;
             }
         }
     }
