@@ -968,7 +968,6 @@ body .sort-table table input[type=checkbox]:checked + label {
 }
 
 body .product-card {
-  position: relative;
   height: 420px;
   padding: 20px;
   display: -webkit-box;
